@@ -25,8 +25,10 @@ public class EmailsSet {
                 case 1:
                     //codigo para añadir
                     System.out.println("Introduce el mail: ");
-                    emails.add(sc.nextLine());
-                    System.out.println("Añadido con éxito");
+                    if (emails.add(sc.nextLine())) {
+                        System.out.println("Añadido con éxito");
+                    }else{
+                        System.out.println("El mail existe");}
                     break;
                 case 2:
                     //bucle con un print para verlos todos
