@@ -23,7 +23,7 @@ public class EmailsSet {
 
             switch (opcion) {
                 case 1:
-                    //codigo para añadir
+                    //codigo para añadir y comprobar mails
                     System.out.println("Introduce el mail: ");
                     if (emails.add(sc.nextLine())) {
                         System.out.println("Añadido con éxito");
