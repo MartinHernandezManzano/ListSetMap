@@ -13,6 +13,7 @@ public class EmailsSet {
 
         //empezamos con los bucles de flujo del programa
         while (!salir) {
+            System.out.println("---Introduce una opción---");
             System.out.println("1. Añadir un email nuevo");
             System.out.println("2. Mostrar todos los mails registrados");
             System.out.println("3. Comprobar registro de mail");
@@ -22,18 +23,36 @@ public class EmailsSet {
 
             switch (opcion) {
                 case 1:
+                    //codigo para añadir
+                    System.out.println("Introduce el mail: ");
+                    emails.add(sc.nextLine());
+                    System.out.println("Añadido con éxito");
                     break;
                 case 2:
+                    //bucle con un print para verlos todos
+                    for(String e : emails){
+                        System.out.println(e);
+                    }
                     break;
                 case 3:
+                    //codigo para comprobar que se contiene el mail
+                    System.out.println("introduce el mail a comprobar");
+                    String emailAComprobar = sc.nextLine();
+                    if (emails.contains(emailAComprobar)){
+                        System.out.println("El mail existe en el sistema");
+                    }else{
+                        System.out.println("El mail no existe en el sistema");
+                    }
                     break;
                 case 0:
                     salir = true;
-                    System.out.println("Chao pesaco!");
+                    System.out.println("Chao pescao!");
                     break;
             }
         }
         sc.close();
     }
 }
+
+
 
